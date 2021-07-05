@@ -1,15 +1,16 @@
 {
-  "name": "ts-basic",
+  "name": "ts-basic-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
     "start": "webpack-cli serve --mode development",
+    "lint": "eslint --fix 'src/**/*.{js,ts}'",
     "lint-fix": "eslint --fix './src/**/*.{js,ts}' && prettier --write './src/**/*.{js,ts}'"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Torahack",
+  "license": "MIT",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.1",
     "@typescript-eslint/parser": "^4.28.1",
@@ -20,7 +21,7 @@
     "prettier": "^2.3.2",
     "ts-loader": "^9.2.3",
     "typescript": "^4.3.5",
-    "webpack": "^5.42.0",
+    "webpack": "^5.42.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
   },
@@ -30,11 +31,8 @@
     }
   },
   "lint-staged": {
-    "/src/**/*.{js,ts}": [
+    "src/**/*.{js,jsx,ts,tsx}": [
       "npm run lint-fix"
     ]
-  },
-  "dependencies": {
-    "resolve": "^1.20.0"
   }
-  }
+}
